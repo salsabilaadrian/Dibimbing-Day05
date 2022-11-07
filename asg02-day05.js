@@ -50,26 +50,22 @@ let cities = {
 
 let result = []
 
-function insert(arr, obj){
-    for(let i = 0; i< arr.length; i++){
-        if(arr[i].hometown_code == "JKT"){
-            result.push(arr[i])
-            result.push(obj.JKT);
-            console.log(result)
-        } else if(arr[i].hometown_code == "BDG"){
-            result.push(arr[i])
-            result.push(obj.BDG);
-            console.log(result)
-        } else if(arr[i].hometown_code == "SBY"){
-            result.push(arr[i])
-            result.push(obj.SBY);
-            console.log(result)
-        } else if(arr[i].hometown_code == "MLG"){
-            result.push(arr[i])
-            result.push(obj.MLG);
-            console.log(result)
-        }      
-    }
+for(let i = 0; i< users.length; i++){
+    if(users[i].hometown_code == "JKT"){
+        result.push(users[i])
+        result.push(cities.JKT);
+        console.log(result)
+    } else if(users[i].hometown_code == "BDG"){
+        result.push(users[i])
+        result.push(cities.BDG);
+        console.log(result)
+    } else if(users[i].hometown_code == "SBY"){
+        result.push(users[i])
+        result.push(cities.SBY);
+        console.log(result)
+    } else if(users[i].hometown_code == "MLG"){
+        result.push(users[i])
+        result.push(cities.MLG);
+        console.log(result)
+    }      
 }
-
-insert(users, cities)
