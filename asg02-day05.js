@@ -48,24 +48,10 @@ let cities = {
     },
 }
 
-let result = []
-
-for(let i = 0; i< users.length; i++){
-    if(users[i].hometown_code == "JKT"){
-        result.push(users[i])
-        result.push(cities.JKT);
-        console.log(result)
-    } else if(users[i].hometown_code == "BDG"){
-        result.push(users[i])
-        result.push(cities.BDG);
-        console.log(result)
-    } else if(users[i].hometown_code == "SBY"){
-        result.push(users[i])
-        result.push(cities.SBY);
-        console.log(result)
-    } else if(users[i].hometown_code == "MLG"){
-        result.push(users[i])
-        result.push(cities.MLG);
-        console.log(result)
+for(let i in users){
+    if(users[i].hometown_code in cities){
+       users[i].hometown_code = cities[users[i].hometown_code]
     }      
 }
+
+console.log(users)
